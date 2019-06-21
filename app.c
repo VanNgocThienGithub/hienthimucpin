@@ -45,7 +45,7 @@ static bool ADC_SingleDataValid()
 /*
   read ADC value
 
-   VFS = 2·VREF·VREFATTF/VINATTF, where
+   VFS = 2Â·VREFÂ·VREFATTF/VINATTF, where
    VREF is selected in the VREFSEL bitfield, and
    VREFATTF (VREF attenuation factor) = (VREFATT+6)/24 when VREFATT is less than 13, and (VREFATT-3)/12 when VREFATT is
    greater than or equal to 13, and
@@ -115,7 +115,7 @@ void app(void){
 
 	              batteryVoltage = readSupplyVoltage();
 	             // batteryVoltagePct = batteryVoltage/33;
-	              phantrampin=(batteryVoltage-1800)/15.4;
+	              phantrampin=(batteryVoltage-1800)/15;
 	     LCD_write(num2string(batteryVoltage),5);
 	     LCD_write(num2string(phantrampin),6);
 	 }
